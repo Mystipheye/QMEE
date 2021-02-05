@@ -88,3 +88,4 @@ print(p6 +geom_point() +geom_line(aes(group=Line)) +theme(legend.position="none"
 ##involves positioning along a common scale. This is what the Cleveland hierarchy indicates to be the best way of depicting quantitative information 
 ##graphically. The colouring presented in this plot is mindful of dichromats and black and white handouts. 
 
+
