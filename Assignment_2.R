@@ -13,6 +13,5 @@ group_by(matingtable,Mating_Latency, Line, Code)%>%summarize(count = n())%>%filt
 ggplot(matingtable, aes(x=Mating_Duration)) +geom_histogram(bins=30) +labs(x="Mating Duration(s)") #seems like there MIGHT be some erroneous lower mating duration values
 ggplot(matingtable, aes(x=Line,y=Mating_Duration, color=Code)) + geom_point() +labs(x="Line", y="Mating Duration(s)")
 ggplot(matingtable, aes(x=Mating_Latency)) +geom_histogram(bins=30)  +labs(x="Mating Latency(s)") #seems like there MIGHT be some erroneous higher mating duration values
-       ggplot(matingtable, aes(x=Line,y=Mating_Duration, color=Code)) + geom_point() +labs(x="Line", y="Mating Latency(s)")  
+ggplot(matingtable, aes(x=Line,y=Mating_Duration, color=Code)) + geom_point() +labs(x="Line", y="Mating Latency(s)")  
 
-       
