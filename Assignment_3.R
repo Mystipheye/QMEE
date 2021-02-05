@@ -86,4 +86,4 @@ print(p6 +geom_point() +geom_line(aes(group=Line)) +theme(legend.position="none"
 #I was curious to see if I could add information about the variable DGRP line here to the prior boxplot (print of p4). I was able to show the differences between 
 ##the two treatments associated with each DGRP line using this adjusted boxplot. Mating latency information, as it pertains to both treatment and DGRP line, 
 ##involves positioning along a common scale. This is what the Cleveland hierarchy indicates to be the best way of depicting quantitative information 
-##graphically. The colouring presented in this plot is mindful of dichromats and black and white handouts.
+##graphically. The colouring presented in this plot is mindful of dichromats and black and white handouts. 
