@@ -1,5 +1,8 @@
 library (tidyverse)
 
+## JD: I needed to add this for stat_compare_means; does it really work for yok, or were you not careful?
+library (ggpubr)
+
 matingtable <- read_csv("Mating_Data_Day_1.csv")
 
 str(matingtable)
@@ -14,6 +17,7 @@ matingtable <- matingtable%>%rename("Mating_Duration"="mating duration", "Mating
 
 saveRDS(matingtable, "Mating_Data_Day_1.rds")
 
+## JD: This is nice. Now maybe it's time to break these into separate R scripts (you can tell us that we have to run readMatingData before running other scripts, for example.
 matingtablerds <- readRDS("Mating_Data_Day_1.rds")
 
 library(ggplot2)
@@ -33,6 +37,8 @@ print (p1 + geom_point() + labs(x="DGRP Line of Male",y="Mating Duration(s)")  +
 ##difficult to look at, but did not just set the theme as theme_classic at the beginning in case I thought it would be useful to include gridlines in
 #subsequent plots formed by this code. I left the default colours, as they would be suitable for dichromats and black and white printouts.  
 
+## JD: You mention dichromats and black and white printouts (or handouts) six times. Why is that good? Try to make your message concise and informative.
+
 p2 <- ggplot(matingtable, aes(x=Line,y=Mating_Latency,color=Treatment)) 
 
 
@@ -40,6 +46,9 @@ print (p2 + geom_point() + labs(x="DGRP Line of Male",y="Mating Latency(s)")  +
          coord_flip() + theme(panel.grid.major = element_blank(), panel.grid.minor=element_blank()))
 
 ##y-axis markings look squished together, but are fine when you zoom in on the figure
+
+## JD: Is there a better order to show the lines in instead of the numerical order? What would be some advantages or disadvantages?
+## Did you consider using a log scale for duration and/or latency?
 
 ##I'm trying to show the mating latency for each DGRP line.I used geometric points to represent the major predictor here since the Cleveland hierarchy says 
 ##position along a common scale is the best way to visually convey quantitative information correctly. I also wanted to represent treatment information, 
@@ -88,4 +97,7 @@ print(p6 +geom_point() +geom_line(aes(group=Line)) +theme(legend.position="none"
 ##involves positioning along a common scale. This is what the Cleveland hierarchy indicates to be the best way of depicting quantitative information 
 ##graphically. The colouring presented in this plot is mindful of dichromats and black and white handouts. 
 
+## JD: So much repetitive information in this ¶, but virtually nothing about the particulars of this unusual plot. Did you like this result? Did you consider alternatives?
+
+## Grade 2.0/3
 
