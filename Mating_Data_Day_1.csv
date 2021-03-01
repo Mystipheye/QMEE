@@ -1,4 +1,4 @@
-Line,Treatment,vial start time,mating start,mating end,mating latency,mating duration
+Line,Treatment,vial start time,mating start,mating end,mating_latency,mating_duration
 1,rival,291,532,1317,241,785
 1,single,291,561,1635,270,1074
 2,rival,291,418,1522,127,1104
