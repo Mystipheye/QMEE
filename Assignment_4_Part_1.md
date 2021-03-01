@@ -1,4 +1,4 @@
-Assignment 3 Part 1 (MMV Question):
+Assignment 4 Part 1 (MMV Question):
   
   - MMV is a viral infection that can cause a serious disease (called MMD)
 - MMD patients are unable to control their natural urge to make mathematical models that attempt to describe biological phenomena
@@ -43,3 +43,5 @@ test again and were found to have a positive test, then that would mean that the
 of getting two positive tests while not having MMV is 0.0025 (0.5*0.5), which is rather low. If during their second test
 they were found to have a negative test, then that would mean that they don't have MMV, and that the result of their 
 first test was a false positive. This is because given the probabilities, a false negative can't occur here.
+
+**BMB: this is fine. See notes about the possible issues with multiple testing. Good point about perfect sensitivity.**
