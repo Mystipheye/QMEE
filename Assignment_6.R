@@ -24,7 +24,6 @@ plot(latencymodel,id.n=4)
 
 dotwhisker::dwplot(latencymodel)
 
-dwplot(latencymodel)
 
 #The following can be inferred from this dot-and-whisker plot. All three 95 % confidence intervals (top one is associated with "Treatment", middle one
 #is associated with "Line", and bottom one is associated with the interaction between "Treatment" and "Line") cross the zero mark. This means that, with
@@ -46,7 +45,6 @@ plot(durationmodel,id.n=4)
 
 dotwhisker::dwplot(durationmodel)
 
-dwplot(durationmodel)
 
 #The same thing can be inferred from this dot_and_whisker plot as for the one done for mating latency.All three 95 % confidence intervals (top one is
 #associated with "Treatment", middle one is associated with "Line", and bottom one is associated with the interaction between "Treatment" and "Line")
