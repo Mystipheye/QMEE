@@ -6,7 +6,7 @@
 
 ##For Mating Latency:
 
-
+ 
 mating_table<-read.csv("Mating_Data_Day_1.csv")
 latencymodel<- lm(mating_latency~Treatment*Line, data=mating_table)
 par(mfrow=c(2,2),mar=c(2,3,1.5,1),mgp=c(2,1,0))
