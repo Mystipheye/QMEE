@@ -78,7 +78,7 @@ ggplot(dflev, aes(Leverage, y)) +
   geom_point() +
   geom_hline(yintercept = 0, linetype = "dashed") +
   ggtitle("Residuals vs Leverage") +
-  lims(y = c(-1, 1)) +
+  lims(y = c(-1, 1)) +s
   ylab("") +
   theme(plot.title = element_text(hjust = 0.5, face = "bold"))
 #Here I tried to create the residuals vs leverage plot since it wasn't showing up before, but it didn't work for some reason.
