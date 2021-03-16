@@ -21,7 +21,7 @@ plot(latencymodel,id.n=4)
 ## however, if you treated it as categorical you'd also
 ## be in trouble because then you would be estimating 120
 ## parameters, one for each line/treatment combination.
-## The mixed model topic will be useful for you.
+## The mixed model topic will be useful for you. #Can I redo this with the mixed model and show it to you again?
 
 #The 'Residuals vs Fitted' plot tests for linearity. Since the mean residual value for each fitted value region is not roughly zero (since all the points
 #don't lie along a horizontal line roughly, but rather a negatively sloped line), it would be fair to say that linearity is lacking within the data.
@@ -76,7 +76,7 @@ dotwhisker::dwplot(latencymodel,by_2sd=TRUE) +
 ##For Mating Duration:
 
 durationmodel<- lm(mating_duration~Treatment*Line, data=mating_table)
-par(mfrow=c(2,2),mar=c(2,3,1.5,1),mgp=c(2,1,0))
+par(mfrow=c(3,2),mar=c(2,3,1.5,1),mgp=c(2,1,0))
 plot(durationmodel,id.n=4)
 
 #The residuals vs Fitted plot shows a horizontal line, which indicates that the linearity assumption holds for this data. The points in the Normal Q-Q plot
@@ -84,6 +84,7 @@ plot(durationmodel,id.n=4)
 #violation of normality. The Scale-Location plot shows a roughly horizontal line with a pretty even spread of points, which indicates that the 
 #homoscedasticity assumption holds here. The Residuals vs Leverage plot does not have any points outside of the Cook's distance boundary, indicating that
 #including or excluding any of these points would not be very influential on the regression line.
+
 
 ## BMB: this looks much better to me. Still the same
 ## problem with line being treated as numeric.

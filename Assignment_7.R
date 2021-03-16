@@ -1,5 +1,4 @@
-#My hypotheses: 
-#I hypothesize that mating latency will be lower for males perceiving greater sperm competition (previously housed with rival males), than for males
+#My Hypotheses:I hypothesize that mating latency will be lower for males perceiving greater sperm competition (previously housed with rival males), than for males
 #perceiving lower sperm competition (previously housed singly). I also hypothesize that mating duration will be greater for males perceiving higher sperm
 #competition, than for males perceiving lower sperm competition. 
 
@@ -49,9 +48,9 @@ plot(latencymodel2,id.n=4)
 
 
 
-dotwhisker::dwplot(latencymodel,by_2sd=TRUE) +
+dotwhisker::dwplot(latencymodel2,by_2sd=TRUE) +
   geom_vline(xintercept=0,lty=2)
-#The following can be inferred from this dot-and-whisker plot. The magnitude of difference in mating latency is about 250 s greater on average for the 
+#The following can be inferred from this dot-and-whisker plot. The magnitude of difference in mating latency is about 80 s lower on average for the 
 #single treatment in comparison to the rival treatment. However, the 95 % confidence interval, which is associated with "Treatment", crosses the zero mark. 
 #This means that with regards to mating latency, the effect of treatment is not statistically clear. 
 
@@ -78,7 +77,7 @@ ggplot(dflev, aes(Leverage, y)) +
   geom_point() +
   geom_hline(yintercept = 0, linetype = "dashed") +
   ggtitle("Residuals vs Leverage") +
-  lims(y = c(-1, 1)) +s
+  lims(y = c(-1, 1)) +
   ylab("") +
   theme(plot.title = element_text(hjust = 0.5, face = "bold"))
 #Here I tried to create the residuals vs leverage plot since it wasn't showing up before, but it didn't work for some reason.
