@@ -54,7 +54,7 @@ dotwhisker::dwplot(latencymodel2,by_2sd=TRUE) +
 #single treatment in comparison to the rival treatment. However, the 95 % confidence interval, which is associated with "Treatment", crosses the zero mark. 
 #This means that with regards to mating latency, the effect of treatment is not statistically clear. 
 
-#For Mating Latency:
+#For Mating Duration:
 
 durationmodel<-glm(mating_duration~Treatment, family="gaussian", data=mating_table)
 par(mfrow=c(2,2),mar=c(2,3,1.5,1),mgp=c(2,1,0))
