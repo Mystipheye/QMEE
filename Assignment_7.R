@@ -6,12 +6,16 @@
 #to make the same line*treatment interaction models as last time (but GLM instead of LM), but they would only give me the "residuals vs fitted" plot, and
 #not all 4 diagnostic plots. For these reasons, decided to forgo including "line" in these models.
 
+## JD: Not a very convincing reason for not doing the desired biological model
+
 #For Mating Latency:
 
 
 mating_table<-read.csv("Mating_Data_Day_1.csv")
 mating_table$Treatment<-as.factor(mating_table$Treatment)
 str(mating_table)
+
+## What sort of glm assumptions are you making? What's your reason for doing a glm? Is this glm different from an lm?)
 
 latencymodel<-glm(mating_latency~Treatment, family="gaussian", data=mating_table)
 par(mfrow=c(2,2),mar=c(2,3,1.5,1),mgp=c(2,1,0))
@@ -87,3 +91,7 @@ dotwhisker::dwplot(durationmodel,by_2sd=TRUE) +
 #The following can be inferred from this dot-and-whisker plot. The magnitude of difference in mating duration is about 140 s greater on average for the 
 #single treatment in comparison to the rival treatment. The 95 % confidence interval, which is associated with "Treatment", crosses the zero mark. 
 #This means that with regards to mating duration, the effect of treatment is statistically clear. 
+
+## JD: Lots of repeated words. Your conclusion should not be "statistically clear", it should be that the single treatment has clearly longer mating duration. Does that match your hypothesis?
+
+## Grade: 1.7/3
